@@ -1,0 +1,1 @@
+usbconfig list | grep Keychron | cut -d':' -f1 | cut -d'.' -f2 | xargs -I '{}' usbconfig -d 0.{} add_quirk UQ_KBD_BOOTPROTO
